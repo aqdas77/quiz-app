@@ -37,23 +37,23 @@ const Quiz = () => {
   return (
     <>{
         questionNumber<=10 ? ( <div
-            className="container  d-flex justify-content-center align-items-center flex-column "
+            classNameName="container  d-flex justify-content-center align-items-center flex-column "
             style={{ height: "80vh", width: "50vw" }}
           >
-            <div className="progress mb-5" style={{ width: "36vw" }} role="progressbar" aria-label="success example " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  <div class="progress-bar" aria-label="success example " style={{width:`${questionNumber*10}%`,backgroundColor: '#198754'}}></div>
+            <div classNameName="progress mb-5" style={{ width: "36vw" }} role="progressbar" aria-label="success example " aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+  <div className="progress-bar" aria-label="success example " style={{width:`${questionNumber*10}%`,backgroundColor: '#198754'}}></div>
 </div>
-            <div className="container  d-flex justify-content-center align-items-center mb-3 border border-secondary" style={{ height:"10vh",width: "36vw" }}>
+            <div classNameName="container  d-flex justify-content-center align-items-center mb-3 border border-secondary" style={{ height:"10vh",width: "36vw" }}>
              <h5>Q {questionNumber}:
               {QuizData[arr[questionNumber - 1]]?.question}</h5> 
                
             </div>
-            <div className="container  d-flex justify-content-center align-items-center flex-column">
+            <div classNameName="container  d-flex justify-content-center align-items-center flex-column">
               {QuizData[arr[questionNumber - 1]]?.options.map((element, index) => {
                 return (
                   <button
                     type="button"
-                    class="btn btn-light m-2 border border-primary"
+                    className="btn btn-light m-2 border border-primary"
                     style={{ width: "36vw" }}
                     onClick={()=>handleClick(questionNumber,index)}
                   >
@@ -64,7 +64,7 @@ const Quiz = () => {
             </div>
             <button
                     type="button"
-                    class="btn btn-success m-2"
+                    className="btn btn-success m-2"
                     onClick={()=>{
                      
                       setQuestionNumber(questionNumber+1)
@@ -74,14 +74,14 @@ const Quiz = () => {
                   </button>
           </div>) : (
            <div
-           className="container  d-flex justify-content-center align-items-center flex-column "
+           classNameName="container  d-flex justify-content-center align-items-center flex-column "
            style={{ height: "80vh", width: "50vw" }}
          >
             {score<=5 ? (<h2>Keep Going! You Can Improve!</h2>): (<h2>Congratulations!</h2>)}
             <h2>Your Score is :</h2>
             <h3>{score}</h3>
             <button type="button"
-                    class="btn btn-success m-2" onClick={()=>window.location.reload(false)}>Try Again</button>
+                    className="btn btn-success m-2" onClick={()=>window.location.reload(false)}>Try Again</button>
          </div>
 
           )
